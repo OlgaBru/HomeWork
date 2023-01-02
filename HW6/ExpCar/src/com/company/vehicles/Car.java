@@ -110,7 +110,7 @@ public class Car {
                     " Мощность: " + power + "кВт" +
                     " Производительность: " + performance + "л.с." +
                     " ФИО водителя: " + driverName +
-                    " Стаж вождения: " + driverExperience + "лет";
+                    " Стаж работы: " + driverExperience + "лет";
         }
     }
 }
