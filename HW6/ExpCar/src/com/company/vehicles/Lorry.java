@@ -20,7 +20,7 @@ public class Lorry extends Car {
     }
 
     @Override
-    public String toString() {
-        return toString() + " ГрузоподЪемность " + capacity + "кг";
+    public void car () {
+        System.out.println(toString() + " Грузоподъемность " + capacity + "кг");
     }
 }

@@ -20,8 +20,8 @@ public class SportCar extends Car{
     }
 
     @Override
-    public String toString() {
-        return toString() + " Предельная скорость " + speedLimit + "км/с";
+    public void car () {
+        System.out.println(toString() + " Предельная скорость " + speedLimit + "км/час");
     }
 }
 

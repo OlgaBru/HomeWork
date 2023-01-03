@@ -84,7 +84,7 @@ public class Car {
 
     public int getDriverExperience() {
         return driverExperience;
-
+    }
 
         public void start () {
             System.out.println("Поехали");
@@ -102,9 +102,13 @@ public class Car {
             System.out.println("Поворот налево");
         }
 
+        public void car() {
+        System.out.println(toString());
+        }
+
         @Override //переопределение м-да,т.к. все классы наследуются от классса Object
         public String toString () {
-            return  "Марка авто: " + modelCar +
+            return  " Марка авто: " + modelCar +
                     " Класс: " + classCar +
                     " Вес: " + weightCar + "кг" +
                     " Мощность: " + power + "кВт" +
@@ -113,6 +117,6 @@ public class Car {
                     " Стаж работы: " + driverExperience + "лет";
         }
     }
-}
+
 
 
