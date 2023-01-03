@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 public class Cat extends Animal{
     public Cat (String name, int age) {
         super (name, age);
@@ -7,3 +8,14 @@ public class Cat extends Animal{
         System.out.println(getName() + " говорит: МЯУ");
     }
 }
+=======
+public class Cat extends Animal{
+    public Cat (String name, int age) {
+        super (name, age);
+    }
+    @Override
+    public void makeNoise(){
+        System.out.println(getName() + " говорит: МЯУ");
+    }
+}
+>>>>>>> e075fa62645bc84c07d21ae6cd3654cd011cce1d
