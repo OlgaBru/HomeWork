@@ -17,11 +17,10 @@ public class Main {
                 IncorrectInfoException.getEnterInfoName(enterName);
             }
 
-        }
-        catch (IncorrectInfoException ex){
+        } catch (IncorrectInfoException ex) {
             System.out.println(ex.getMessage());
             System.out.println(ex.getName());
-
+            ex.printStackTrace();
         }
 
         try {
@@ -34,7 +33,7 @@ public class Main {
         } catch (IncorrectInfoException ex) {
             System.out.println(ex.getMessage());
             System.out.println(ex.getAge());
-
+            ex.printStackTrace();
         }
     }
 }

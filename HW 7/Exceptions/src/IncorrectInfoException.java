@@ -36,4 +36,10 @@ public class IncorrectInfoException extends Exception {
             }
             return age;
         }
+        public void printStackTrace(boolean enterName) {
+        System.out.println(enterName);
+        }
+        public void printStackTrace (int age) {
+        System.out.println(age);
+        }
 }
