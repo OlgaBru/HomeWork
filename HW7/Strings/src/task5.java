@@ -9,8 +9,17 @@ public class task5 {
         System.out.print("Введите дату: ");
         String date = sc.nextLine();
 
-        Pattern pattern = Pattern.compile ("^0[1-9]|[12][0-9]|30[\\/\\.-]0[1-9]|1[012][\\/\\.-]1|2[0-9]{3}\\s[0-2][0-4][\\.:][0-5][0-9]$");
+        Pattern pattern = Pattern.compile("^(0[1-9]|[12][0-9]|30)[\\.\\/\\-](0[1-9]|1[012])[\\.\\/\\-]" +
+                "((1[0-9]{1}[0-9]{1}[0-9]{1})|(20{1}[0-1]{1}[0-2]){1})\\s[0-2][0-4][\\.:][0-5][0-9]$");
+        //разделители для даты ".", "/", "-", для времени ".", ":"
         Matcher matcher = pattern.matcher(date);
-        System.out.println(matcher.matches());
+        /*System.out.println(matcher.matches());*/
+
+        if (matcher.matches()) {
+            System.out.println(date + " - существует");
+
+        }else{
+            System.out.println(date + " - не существует");
+        }
     }
 }
