@@ -9,19 +9,20 @@ public class Main {
             Scanner sc = new Scanner(System.in);
             System.out.print("Введите ФИО: ");
             String name = sc.nextLine();
-            Pattern pattern = Pattern.compile("^[a-zA-Z, \\., \\s]{0,200}$");
+            System.out.println(name);
+            Pattern pattern = Pattern.compile("^(\\W+\\s\\W+[\\.*\\s]\\W+\\.*){0,200}$");//ФИО кирилицей
             Matcher matcher = pattern.matcher(name);
-            System.out.println(matcher.matches());
-            boolean enterName = false;
-            if (enterName == matcher.matches()) {
-                IncorrectInfoException.getEnterInfoName(enterName);
-            }
+
+            boolean nameFalse = matcher.matches();
+            /*System.out.println(matcher.matches());*/
+            IncorrectInfoException.getEnterInfoName(nameFalse);
 
         } catch (IncorrectInfoException ex) {
             System.out.println(ex.getMessage());
-            System.out.println(ex.getName());
+            /*System.out.println(ex.getName());*///введенные ФИО - выше, эта строка выводит null
             ex.printStackTrace();
-        }
+            return;
+            }
 
         try {
             Scanner sc = new Scanner(System.in);

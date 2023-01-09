@@ -1,20 +1,19 @@
 public class IncorrectInfoException extends Exception {
     private String name;
-    private static boolean enterName;
     private int age;
+    private boolean nameFalse;
 
     public IncorrectInfoException() {
     }
     public String getName() {return name;}
 
-    public boolean getEnterName() {return enterName;}
-
     public int getAge() {return age;}
+    public boolean getNameFalse() {return nameFalse;}
 
-    public IncorrectInfoException (String message, boolean enterName) {
+    public IncorrectInfoException (String message, boolean nameFalse) {
         super(message);
 
-        this.enterName = enterName;
+        this.nameFalse = nameFalse;
         this.age = age;
     }
 
@@ -23,11 +22,11 @@ public class IncorrectInfoException extends Exception {
         this.age = age;
     }
 
-        public static boolean getEnterInfoName (boolean enterName) throws IncorrectInfoException {
-        if (enterName = false) {
-                throw new IncorrectInfoException("Введенные ФИО некорректны", enterName);
+        public static boolean getEnterInfoName (boolean nameFalse) throws IncorrectInfoException {
+        if (nameFalse==false) {
+                throw new IncorrectInfoException("Введенные ФИО некорректны", nameFalse);
             }
-            return false;
+            return nameFalse;
         }
 
         public static int  getEnterInfoAge (int age) throws IncorrectInfoException {
