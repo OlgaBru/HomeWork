@@ -49,7 +49,8 @@ public class writeReadFiles {
             String line;
 
             //добавляем в список строки из прочитанных файлов
-            while ((line = br1.readLine()) != null) {//в перем. line запис. строка, кот. считывается с файла, если она не пустая, то чтение далее
+            while ((line = br1.readLine()) != null) {//в перем. line запис. строка, кот. считывается с файла,
+                                                     // если она не пустая, то чтение далее
                 threeFiles.add(line);
                 threeFiles.add(br2.readLine());
                 threeFiles.add(br3.readLine());
